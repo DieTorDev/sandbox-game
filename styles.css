@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-color: #222;
+  }
+
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  canvas{
+    border:8px solid #676666;
+  }
+  
+  .button-container{
+    width: 100%;
+    margin: 30px;
+  }
+
+  .button{
+    width: 80px;
+    height: 35px;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: "Pixelify Sans", sans-serif;
+    margin: 5px;
+    cursor: pointer;
+}
+
+  .button[data-materia = "sand"]{
+    background-color: #F5C105;
+  }
+
+  .button[data-materia = "wood"]{
+    background-color: #905328;
+  }
+
+  .button[data-materia = "gravel"]{
+    background-color: #858585;
+  }
+
+  .button[data-materia = "water"]{
+    background-color: #3167b3;
+  }
