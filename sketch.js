@@ -1,7 +1,5 @@
-const sandButtonElement = document.getElementById('sand');
-const woodButtonElement = document.getElementById('wood');
-const gravelButtonElement = document.getElementById('gravel');
-const waterButtonElement = document.getElementById('water');
+const selectButtonElement = document.getElementById('select');
+const restartButtonElement = document.getElementById('restart');
 
 const width = 400;
 const height = 500;
@@ -217,7 +215,5 @@ function mouseDragged() {
   }
 }
 
-sandButtonElement.addEventListener('click', selectMateria);
-woodButtonElement.addEventListener('click', selectMateria);
-gravelButtonElement.addEventListener('click', selectMateria);
-waterButtonElement.addEventListener('click', selectMateria);
+selectButtonElement.addEventListener('click', selectMateria);
+restartButtonElement.addEventListener('click', setup);

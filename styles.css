@@ -37,6 +37,7 @@ body {
     background-color: white;
     box-shadow: 0px 0px 20px 0px black;
     padding-block: 10px;
+    user-select: none;
   }
 
 .button{
@@ -120,7 +121,25 @@ body {
     right: -10px;
   }
 
-  .button:hover{
+  .button:hover, .restart:hover{
     box-shadow: none;
     transform: scale(.97);
   }
+
+  .restart{
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    background-color: #DB2E4D;
+    border: 2px solid #8b152f;
+    border-radius: 6px;
+    font-size: 32px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bolder;
+    color: #8b152f;
+    box-shadow: 0px 3px 0px 0px #8b152f;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  
