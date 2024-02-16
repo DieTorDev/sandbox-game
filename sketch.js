@@ -147,20 +147,27 @@ const gravity = (i, j, position, nextGrid) => {
     }
     //Gravedad ----> Agua
     else if (grid[i][j] >= 200 && grid[i][j] <= 210) {
-      if (below === 0) {
+      if (below === 0 && j + 1 < grid[i].length) {
         nextGrid[i][j + 1] = grid[i][j];
-      } else if (bLeft === 0) {
+      } else if (bLeft === 0 && j + 1 < grid[i].length && i - randomDir >= 0) {
         nextGrid[i - randomDir][j + 1] = grid[i][j];
         grid[i][j] = 0;
-      } else if (bRight === 0) {
-        nextGrid[i + randomDir][j + 1] = grid[i][j];
-      } else if (left === 0) {
+      } else if (
+        bRight === 0 &&
+        j + 1 < grid[i].length &&
+        grid[i][j + 1] === 0
+      ) {
+        nextGrid[i][j + 1] = grid[i][j];
+      } else if (left === 0 && i - 1 >= 0 && nextGrid[i - 1][j] === 0) {
         nextGrid[i - 1][j] = grid[i][j];
         grid[i][j] = 0;
-        if (right === 0) {
-          nextGrid[i + 1][j] = grid[i][j];
-          grid[i][j] = 0;
-        }
+      } else if (
+        right === 0 &&
+        i + 1 < grid.length &&
+        nextGrid[i + 1][j] === 0
+      ) {
+        nextGrid[i + 1][j] = grid[i][j];
+        grid[i][j] = 0;
       } else {
         nextGrid[i][j] = grid[i][j];
       }
