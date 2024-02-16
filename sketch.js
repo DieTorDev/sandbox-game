@@ -29,6 +29,12 @@ const materials = {
       min: 66,
       max: 75
     }
+  },
+  water: {
+    color: {
+      min: 200,
+      max: 210
+    }
   }
 };
 
@@ -83,6 +89,11 @@ const updateGrid = () => {
         let x = i * w;
         let y = j * w;
         square(x, y, w);
+      } else if (grid[i][j] >= 200 && grid[i][j] <= 210) {
+        fill(grid[i][j], 250, 245);
+        let x = i * w;
+        let y = j * w;
+        square(x, y, w);
       }
     }
   }
@@ -98,6 +109,8 @@ const gravity = (i, j, position, nextGrid) => {
     if (i > 0 && i < cols - 1) {
       bLeft = grid[i - randomDir][j + 1];
       bRight = grid[i + randomDir][j + 1];
+      left = grid[i - 1][j];
+      right = grid[i + 1][j];
     }
 
     //Gravedad ----> Arena
@@ -105,25 +118,49 @@ const gravity = (i, j, position, nextGrid) => {
       if (below === 0) {
         //si below está vacío cae
         nextGrid[i][j + 1] = grid[i][j];
+        grid[i][j] = 0;
       } else if (bLeft === 0) {
         //si below-left está vacío
         nextGrid[i - randomDir][j + 1] = grid[i][j];
+        grid[i][j] = 0;
       } else if (bRight === 0) {
         //si below-right está vacío
         nextGrid[i + randomDir][j + 1] = grid[i][j];
+        grid[i][j] = 0;
       } else {
         //si no está vacío se para
         nextGrid[i][j] = grid[i][j];
       }
     }
     //Gravedad ----> Madera
-    if (grid[i][j] >= 56 && grid[i][j] <= 65) {
+    else if (grid[i][j] >= 56 && grid[i][j] <= 65) {
       nextGrid[i][j] = grid[i][j];
     }
     //Gravedad ----> Grava
-    if (grid[i][j] >= 66 && grid[i][j] <= 75) {
+    else if (grid[i][j] >= 66 && grid[i][j] <= 75) {
       if (below === 0) {
         nextGrid[i][j + 1] = grid[i][j];
+        grid[i][j] = 0;
+      } else {
+        nextGrid[i][j] = grid[i][j];
+      }
+    }
+    //Gravedad ----> Agua
+    else if (grid[i][j] >= 200 && grid[i][j] <= 210) {
+      if (below === 0) {
+        nextGrid[i][j + 1] = grid[i][j];
+      } else if (bLeft === 0) {
+        nextGrid[i - randomDir][j + 1] = grid[i][j];
+        grid[i][j] = 0;
+      } else if (bRight === 0) {
+        nextGrid[i + randomDir][j + 1] = grid[i][j];
+      } else if (left === 0) {
+        nextGrid[i - 1][j] = grid[i][j];
+        grid[i][j] = 0;
+        if (right === 0) {
+          nextGrid[i + 1][j] = grid[i][j];
+          grid[i][j] = 0;
+        }
       } else {
         nextGrid[i][j] = grid[i][j];
       }

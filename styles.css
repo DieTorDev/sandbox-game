@@ -1,48 +1,126 @@
 body {
+  height: 100vh;
     text-align: center;
     padding: 0;
     margin: 0;
-    background-color: #222;
+    background: linear-gradient(180deg, rgba(66,40,182,1) 0%, rgba(60,38,112,1) 100%);
+  }
+  
+  img{
+    max-width: 100%;
+  }
+
+  span{
+    pointer-events: none;
   }
 
   main{
     display: flex;
+    flex-direction:  column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
   
   canvas{
-    border:8px solid #676666;
+    border:8px solid rgba(230, 230, 230, 0.901);
+    border-radius: 6px;
+    box-shadow: 0px 0px 20px 0px black;
   }
   
   .button-container{
+    border:8px solid rgba(230, 230, 230, 0.901);
     width: 100%;
     margin: 30px;
+    width: 400px;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0px 0px 20px 0px black;
+    padding-block: 10px;
   }
 
-  .button{
+.button{
+  position: relative;
     width: 80px;
     height: 35px;
     font-weight: bolder;
     font-size: 20px;
-    font-family: "Pixelify Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 5px;
     cursor: pointer;
+    border: none;
+    border-radius: 6px;
 }
 
   .button[data-materia = "sand"]{
     background-color: #F5C105;
+    border: 1px solid #ad6404;
+    color: #ad6404;
+    box-shadow: 0px 3px 0px 0px #ad6404;
+  }
+
+  .shovel{
+    position: absolute;
+    width: 25px;
+    top: -10px;
+    left: -5px;
+    transform: rotate(210deg);
   }
 
   .button[data-materia = "wood"]{
     background-color: #905328;
+    border: 1px solid #2c2c2c;
+    color: #452700;
+    box-shadow: 0px 3px 0px 0px #452700;
+  }
+
+  .leave{
+    position: absolute;
+    width: 20px;
+  }
+
+  .leave:first-child{
+    top: -14px;
+    left: 24px;
+  }
+
+  .leave:last-child{
+    top: -14px;
+    left: 24px;
+    transform-origin: bottom;
+    transform: rotate(30deg);
   }
 
   .button[data-materia = "gravel"]{
     background-color: #858585;
+    border: 1px solid #2c2c2c;
+    color: #2c2c2c ;
+    box-shadow: 0px 3px 0px 0px #2c2c2c;
+  }
+
+  .pickaxe{
+    position: absolute;
+    width: 30px;
+    top: -24px;
+    left: 35px;
+    transform: rotate(240deg);
   }
 
   .button[data-materia = "water"]{
     background-color: #3167b3;
+    border: 1px solid #093573;
+    color: #093573 ;
+    box-shadow: 0px 3px 0px 0px #093573;
+  }
+
+  .bubbles{
+    position: absolute;
+    width: 30px;
+    top: -10px;
+    right: -10px;
+  }
+
+  .button:hover{
+    box-shadow: none;
+    transform: scale(.97);
   }
