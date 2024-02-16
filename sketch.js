@@ -116,19 +116,19 @@ const gravity = (i, j, position, nextGrid) => {
     //Gravedad ----> Arena
     if (grid[i][j] >= 45 && grid[i][j] <= 55) {
       if (below === 0) {
-        //si below está vacío cae
+        // Si la casilla debajo está vacía, la arena cae normalmente
         nextGrid[i][j + 1] = grid[i][j];
         grid[i][j] = 0;
       } else if (bLeft === 0) {
-        //si below-left está vacío
+        // Si below-left está vacío
         nextGrid[i - randomDir][j + 1] = grid[i][j];
         grid[i][j] = 0;
       } else if (bRight === 0) {
-        //si below-right está vacío
+        // Si below-right está vacío
         nextGrid[i + randomDir][j + 1] = grid[i][j];
         grid[i][j] = 0;
       } else {
-        //si no está vacío se para
+        // Si no está vacío, se para
         nextGrid[i][j] = grid[i][j];
       }
     }
