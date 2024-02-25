@@ -4,7 +4,7 @@
 
 ## Ejemplo en vivo
 
-- [URL-de-github-pages-de-este-proyecto](https://dietordev.github.io/sandbox-game/)
+- [Vista en vivo](https://dietordev.github.io/sandbox-game/)
 
 ## Descripción 📑
 
