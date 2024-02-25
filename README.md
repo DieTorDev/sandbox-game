@@ -24,11 +24,14 @@ He aprendido a tratar con elementos canvas y a manejar la asincronía, me he ade
 
 ## Vista previa del proyecto
 
-Si quieres echar un vistazo al proyecto, te recomiendo:
+Si quieres echar un vistazo al proyecto:
 
 ![Captura del proyecto](https://github.com/DieTorDev/sandbox-game/blob/main/screenshots/sand-demo.png)
+
 ![Captura del proyecto](https://github.com/DieTorDev/sandbox-game/blob/main/screenshots/sand-physics-demo.png)
+
 ![Captura del proyecto](https://github.com/DieTorDev/sandbox-game/blob/main/screenshots/water-physics-demo.png)
+
 ![Captura del proyecto](https://github.com/DieTorDev/sandbox-game/blob/main/screenshots/gravel.png)
 
 ## Autor ✒️
