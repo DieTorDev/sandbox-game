@@ -39,7 +39,7 @@ Si quieres echar un vistazo al proyecto:
 
 Diego Torrado Sánchez
 
-- [torradosanchezdiego@gmail.com](torradosanchezdiego@gmail.com)
+- torradosanchezdiego@gmail.com
 - [LinkedIn](https://www.linkedin.com/in/diego-torrado-s%C3%A1nchez-2124322b4/)
 - [Porfolio web](https://tu-dominio.com/)
 
