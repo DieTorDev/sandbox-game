@@ -44,9 +44,9 @@ Diego Torrado Sánchez
 
 ## Referencias
 
-Documentación P5.js: https://p5js.org/es/reference/
-Artículo Jason Today: https://jason.today/falling-sand
-Vídeo Noita devs: https://www.youtube.com/watch?v=prXuyMCgbTc&t=204s
+- [Documentación P5.js](https://p5js.org/es/reference/)
+- [Artículo Jason Today](https://jason.today/falling-sand)
+- [Video Noita devs](https://www.youtube.com/watch?v=prXuyMCgbTc&t=204s)
 
 ## Licencia 📄
 
