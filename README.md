@@ -1,6 +1,8 @@
 # Sandbox Game
 
-![Imagen del proyecto](https://github.com/DieTorDev/sandbox-game/blob/main/screenshots/main-img.jpg)
+<p align="center">
+  <img src="https://github.com/DieTorDev/sandbox-game/blob/main/screenshots/main-img.jpg" />
+</p>
 
 ## Ejemplo en vivo
 
